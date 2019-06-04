@@ -1,15 +1,17 @@
 import React from 'react';
-import { KeyboardAvoidingView, SafeAreaView, WebView } from 'react-native';
+import { SafeAreaView, WebView } from 'react-native';
 
 function App() {
   return (
     <SafeAreaView style={{ flex: 1 }}>
-      <KeyboardAvoidingView style={{ flex: 1 }}>
-        <WebView
-          source={{ uri: 'http://localhost:5000' }}
-          style={{ flex: 1 }}
-        />
-      </KeyboardAvoidingView>
+      <WebView
+        source={{
+          uri: 'https://ozaki25.github.io/bootstrap_modal_sample/',
+        }}
+        style={{ flex: 1 }}
+        startInLoadingState
+        bounces={false}
+      />
     </SafeAreaView>
   );
 }
